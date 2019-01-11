@@ -1,0 +1,36 @@
+{
+  "name": "ganymede-light-duotone-prism",
+  "version": "1.0.0",
+  "main": "index.css",
+  "browser": "./ganymede-light-prism.css",
+  "repository": "git@github.com:charliewilco/ganymede-light-duotone-prism.git",
+  "author": "Charles ⚡ <charlespeters42@gmail.com>",
+  "license": "MIT",
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "scripts": {
+    "build": "postcss index.css > ganymede-light-prism.css",
+    "prepublish": "yarn build"
+  },
+  "postcss": {
+    "map": false,
+    "plugins": {
+      "cssnano": {
+        "preset": "default"
+      },
+      "autoprefixer": {
+        "remove": true
+      },
+      "postcss-custom-properties": {
+        "preserve": true
+      }
+    }
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.4",
+    "cssnano": "^4.1.8",
+    "postcss-cli": "^6.1.1",
+    "postcss-custom-properties": "^8.0.9"
+  }
+}
